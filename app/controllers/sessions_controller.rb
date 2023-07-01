@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to root_url
     else
+      flash[:notice] = "ログインに失敗しました"
       render 'new'
     end
   end
