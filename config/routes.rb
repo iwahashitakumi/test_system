@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  namespace :admin do
   get 'users/index'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
@@ -8,6 +9,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :users
+  
   resources :sessions
+end
+  resources :users
 end
