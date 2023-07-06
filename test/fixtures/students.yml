@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  alias: MyString
+  student_code: 1
+  grade: 1
+  birth: 2023-07-06
+  admission: 2023-07-06
+
+two:
+  name: MyString
+  email: MyString
+  alias: MyString
+  student_code: 1
+  grade: 1
+  birth: 2023-07-06
+  admission: 2023-07-06

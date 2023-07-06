@@ -1,8 +1,24 @@
 body {
-
   font-family: 'Open Sans', sans-serif;
 }
 
+
+table th {
+  background-color: #fbc25b;
+  padding: 10px 20px;
+  width :150px;
+}
+
+table td {
+  background-color: #f9ecd5;
+  padding: 10px 20px;
+  width :150px;
+}
+
+.notice {
+  background-color: #ccf;
+  padding: 5px;
+}
 .login {
   width: 400px;
   margin: 16px auto;

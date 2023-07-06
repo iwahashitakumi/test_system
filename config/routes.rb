@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'students/index'
   namespace :admin do
   get 'users/index'
   get    '/login',   to: 'sessions#new'
@@ -12,5 +13,6 @@ Rails.application.routes.draw do
   
   resources :sessions
 end
+  resources :students
   resources :users
 end

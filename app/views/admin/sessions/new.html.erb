@@ -5,7 +5,7 @@
    <p class="notice"><%= flash[:notice] %></p>
  <% end %>
 <div class="login-container">
-<%= form_for(:session, url: login_path) do |f| %>
+<%= form_for(:session, url: admin_login_path) do |f| %>
   <div class = "form"><%= f.label :email %></div>
   <%= f.email_field :email %>
   <div class = "form"><%= f.label :password %></div>
