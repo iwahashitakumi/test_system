@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'students/index'
   namespace :admin do
   get 'users/index'
+  get 'students/complete', to: 'students#complete'
+  get 'students/new', to: 'students#new'
+  get 'students/edit', to: 'students#edit'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
@@ -12,7 +14,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   
   resources :sessions
-end
   resources :students
+end
+  
   resources :users
 end

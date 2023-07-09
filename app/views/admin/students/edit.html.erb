@@ -1,6 +1,6 @@
-<h3>生徒情報新規作成</h3>
+<h3>生徒情報編集</h3>
 
-<%= form_with model: @student do |f| %>
+<%= form_with model: @student, url:edit_admin_student_path(@student.id)  do |f| %>
   <table>
     <tr>
       <th><%= f.label :student_code ,"学籍番号" %></th>
@@ -42,8 +42,8 @@
 
   <div>
     <ul>
-      <li><%= f.submit "登録完了する"%></li>
-      <li><%= link_to "生徒情報一覧に戻る", :students %></li>
+      <li><%= f.submit "編集を完了する"%></li>
+      <li><%= link_to "生徒情報一覧に戻る", :admin_students %></li>
     </ul>
   </div>
 <% end %>

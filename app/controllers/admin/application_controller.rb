@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+class Admin::ApplicationController < ActionController::Base
   include SessionsHelper
   private
   def logged_in_user

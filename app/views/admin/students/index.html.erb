@@ -1,7 +1,7 @@
 <h3>生徒情報一覧</h3>
 
 <div>
-<%= form_tag(students_path, method: "get") do %>
+<%= form_tag(admin_students_path, method: "get") do %>
 <%= label_tag :grade, "学年" %><%= text_field_tag :grade, params[:grade] %>
 <%= submit_tag "検索" %>
 <% end %>
@@ -25,12 +25,12 @@
         <td><%= student.grade %></td>
         <td><%= student.name %></td>
         <td><%= student.alias %></td>
-        <td><%= link_to "編集", [:edit, student] %></td>
+        <td><%= link_to "編集", [:edit_admin, student] %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<p><%= link_to "生徒新規登録", :new_student %></p>
+<p><%= link_to "生徒新規登録", :new_admin_student %></p>
 
 <%= paginate @students %>
