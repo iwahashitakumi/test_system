@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
+  get 'students/take_params', to: 'students#take_params'
   get 'users/index'
   get 'students/complete', to: 'students#complete'
   get 'students/new', to: 'students#new'

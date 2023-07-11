@@ -15,8 +15,9 @@ class Admin::StudentsController < Admin::ApplicationController
      begin
        @student.save!
        redirect_to admin_students_complete_path
-     else
-       render "new"
+     rescue
+       flash[:alert] = "予定の登録に失敗しました。"
+       redirect_to admin_students_path
      end
   end
 
@@ -29,11 +30,12 @@ class Admin::StudentsController < Admin::ApplicationController
 
   def update
     @student = Student.find(params[:id])
-     if @student.update(params.require(:student).permit(:name, :email, :alias,     :student_code, :grade, :birth, :admission))
+     if @student.update(params.require(:student).permit(:name, :email, :alias,:student_code, :grade, :birth, :admission))
        flash[:notice] = "ユーザーIDが「#{@student.id}」の情報を更新しました"
        redirect_to admin_students_complete_path
      else
-       render "edit"
+       flash[:false] = "予定の登録に失敗しました。"
+       redirect_to admin_students_path
      end
   end
 
@@ -42,5 +44,7 @@ class Admin::StudentsController < Admin::ApplicationController
 
   def complete
   end
+
+  
 
 end

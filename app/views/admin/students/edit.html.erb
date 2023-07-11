@@ -1,6 +1,6 @@
 <h3>生徒情報編集</h3>
 
-<%= form_with model: @student, url:edit_admin_student_path(@student.id)  do |f| %>
+<%= form_with model: @student, url: admin_student_path  do |f| %>
   <table>
     <tr>
       <th><%= f.label :student_code ,"学籍番号" %></th>

@@ -6,7 +6,12 @@
 <%= submit_tag "検索" %>
 <% end %>
 </div>
-
+<% if flash[:alert] %>
+ <p class="notice"><%= flash[:alert] %></p>
+<% end %>
+<% if flash[:false] %>
+ <p class="notice"><%= flash[:false] %></p>
+<% end %>
 <table>
   <thead>
     <tr>
